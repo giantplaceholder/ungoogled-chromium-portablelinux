@@ -80,6 +80,14 @@ apply_domsub() {
     fi
 }
 
+embed_russian_ca() {
+    echo "Embedding Russian Trusted Root CA"
+    (
+        cd "${_src_dir}"
+        python3 "${_root}/scripts/embed_russian_ca.py"
+    )
+}
+
 write_gn_args() {
     mkdir -p "${_out_dir}"
 
